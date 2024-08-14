@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   04_error_check.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amarroyo <amarroyo@student.42madrid.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 11:47:35 by amarroyo          #+#    #+#             */
-/*   Updated: 2024/08/13 14:05:55 by amarroyo         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../../inc/push_swap.h"
 
 // Ft_atoll handles the int_min in_max limits, if ft_atoi is used, it cannot
