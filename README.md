@@ -20,4 +20,5 @@ For example:
 ```
 
 Special thanks to [Thuggonaut](https://github.com/Thuggonaut), not only her [tutorial](https://www.youtube.com/watch?v=wRvipSG4Mmk) on push_swap is simply amazing, I've learnt a lot about how to organise projects and make great Makefile files. <3
+
 And, of course, to my dear, dear, [Lusvart](https://github.com/lusvart), working together from day one, we did it!!
