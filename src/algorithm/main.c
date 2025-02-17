@@ -20,10 +20,7 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
-	{
-		ft_printf("Error\n");
 		return (0);
-	}
 	stack_a = *ft_init_stack(&stack_a, argc, argv);
 	if (!stack_a)
 	{
