@@ -1,27 +1,19 @@
 #include "../../inc/push_swap.h"
 
- void	ft_rev_rotate(t_stack_node **headNodePtr)
+void	ft_rev_rotate(t_stack_node **headNodePtr)
 {
-	t_stack_node	*node_to_rotate;
-	t_stack_node	*penultimate_node;
+	t_stack_node *node_to_rotate;
 
 	if (*headNodePtr == NULL || (*headNodePtr)->next == NULL)
 		return ;
 	node_to_rotate = *headNodePtr;
-	penultimate_node = NULL;
 	while (node_to_rotate->next != NULL)
-	{
-		penultimate_node = node_to_rotate;
-		node_to_rotate = node_to_rotate->next;
-	}
-	if (penultimate_node != NULL)
-	{
-		penultimate_node->next = NULL;
-		node_to_rotate->next = *headNodePtr;
-		(*headNodePtr)->prev = node_to_rotate;
-		*headNodePtr = node_to_rotate;
-		node_to_rotate->prev = NULL;
-	}
+		node_to_rotate = node_to_rotate->next; //para llegar al ultimo nodo
+	node_to_rotate->next = *headNodePtr;
+	(*headNodePtr)->prev = node_to_rotate;
+	node_to_rotate->prev->next = NULL; //convierte el penultimo nodo en el ultimo
+	node_to_rotate->prev = NULL;
+	*headNodePtr = node_to_rotate;
 }
 
 void	ft_rra(t_stack_node **stack_node)
