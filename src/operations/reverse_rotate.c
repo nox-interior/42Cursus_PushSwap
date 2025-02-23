@@ -8,11 +8,11 @@ void	ft_rev_rotate(t_stack_node **headNodePtr)
 		return ;
 	node_to_rotate = *headNodePtr;
 	while (node_to_rotate->next != NULL)
-		node_to_rotate = node_to_rotate->next; //para llegar al ultimo nodo
-	node_to_rotate->next = *headNodePtr;
-	(*headNodePtr)->prev = node_to_rotate;
-	node_to_rotate->prev->next = NULL; //convierte el penultimo nodo en el ultimo
+		node_to_rotate = node_to_rotate->next;
+	node_to_rotate->prev->next = NULL;
 	node_to_rotate->prev = NULL;
+	node_to_rotate->next = *headNodePtr; 
+	(*headNodePtr)->prev = node_to_rotate;
 	*headNodePtr = node_to_rotate;
 }
 
