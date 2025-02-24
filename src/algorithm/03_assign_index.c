@@ -25,25 +25,25 @@ void	ft_assign_index(t_stack_node **stack_node)
 	int				index_assigned;
 	int				min;
 	int				max;
-	int				i;
+	int				value_to_find;
 
 	if (!stack_node || !*stack_node)
 		return ;
 	ft_find_min_max(stack_node, &min, &max);
 	index_assigned = 1;
-	i = min;
-	while (i <= max)
+	value_to_find = min;
+	while (value_to_find <= max)
 	{
 		current_node = *stack_node;
 		while (current_node != NULL)
 		{
-			if (current_node->value == i)
+			if (current_node->value == value_to_find)
 			{
 				current_node->index = index_assigned++;
 				break ;
 			}
 			current_node = current_node->next;
 		}
-		i++;
+		value_to_find++;
 	}
 }
