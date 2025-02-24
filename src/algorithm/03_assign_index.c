@@ -21,7 +21,7 @@ static void	ft_find_min_max(t_stack_node **stack_node, int *min, int *max)
 
 void	ft_assign_index(t_stack_node **stack_node)
 {
-	t_stack_node	*copy_s;
+	t_stack_node	*current_node;
 	int				index_assigned;
 	int				min;
 	int				max;
@@ -34,15 +34,15 @@ void	ft_assign_index(t_stack_node **stack_node)
 	i = min;
 	while (i <= max)
 	{
-		copy_s = *stack_node;
-		while (copy_s != NULL)
+		current_node = *stack_node;
+		while (current_node != NULL)
 		{
-			if (copy_s->value == i)
+			if (current_node->value == i)
 			{
-				copy_s->index = index_assigned++;
+				current_node->index = index_assigned++;
 				break ;
 			}
-			copy_s = copy_s->next;
+			current_node = current_node->next;
 		}
 		i++;
 	}
