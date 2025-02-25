@@ -56,14 +56,14 @@ bool	ft_check_limits(const char *str)
 
 bool	ft_check_duplicates(t_stack_node *stack, int nbr)
 {
-	t_stack_node	*current;
+	t_stack_node	*current_node;
 
-	current = stack;
-	while (current)
+	current_node = stack;
+	while (current_node)
 	{
-		if (current->value == nbr)
+		if (current_node->value == nbr)
 			return (false);
-		current = current->next;
+		current_node = current_node->next;
 	}
 	return (true);
 }
