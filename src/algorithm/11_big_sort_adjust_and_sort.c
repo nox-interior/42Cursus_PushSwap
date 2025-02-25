@@ -25,15 +25,15 @@ void	ft_adjust_stack(t_stack_node **stack_a)
 	}
 }
 
-int	ft_sorted_stack(t_stack_node *stack)
+bool	ft_sorted_stack(t_stack_node *stack)
 {
 	while (stack->next != NULL)
 	{
 		if (stack->value > stack->next->value)
-			return (0);
+			return (false);
 		stack = stack->next;
 	}
-	return (1);
+	return (true);
 }
 
 void	ft_big_sort(t_stack_node **stack_a, t_stack_node **stack_b)
