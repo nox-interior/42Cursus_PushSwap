@@ -2,16 +2,16 @@
 
 void	ft_free_list(t_stack_node **headNodePtr)
 {
-	t_stack_node	*current;
+	t_stack_node	*current_node;
 	t_stack_node	*next_node;
 
 	if (!headNodePtr || !*headNodePtr)
 		return ;
 	while (*headNodePtr != NULL)
 	{
-		current = *headNodePtr;
+		current_node = *headNodePtr;
 		next_node = (*headNodePtr)->next;
-		free(current);
+		free(current_node);
 		*headNodePtr = next_node;
 	}
 	*headNodePtr = NULL;
