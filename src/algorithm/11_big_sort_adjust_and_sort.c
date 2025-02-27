@@ -60,4 +60,3 @@ void	ft_big_sort(t_stack_node **stack_a, t_stack_node **stack_b)
 	if (!ft_sorted_stack(*stack_a))
 		ft_adjust_stack(stack_a);
 }
-

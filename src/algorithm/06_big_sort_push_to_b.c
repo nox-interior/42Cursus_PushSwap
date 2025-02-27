@@ -9,7 +9,7 @@ which would lead to a (stack_len / 2) that could result in pushing more
 elements to stack_b than needed, ending up with less than 3 elements to be
 sorted in stack_a. This, in the end, would produce unnecessary and extra
 costly operations in order to bring back the elements to stack_a once sorted.
-*/ 
+*/
 int	ft_stack_len(t_stack_node *stack)
 {
 	int	length;
