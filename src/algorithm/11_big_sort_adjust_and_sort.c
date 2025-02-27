@@ -7,20 +7,20 @@ void	ft_adjust_stack(t_stack_node **stack_a)
 
 	stack_len = ft_stack_len(*stack_a);
 	min_index_pos = ft_min_index_pos(stack_a);
-	if (min_index_pos > stack_len / 2)
+	if (min_index_pos <= stack_len / 2)
 	{
-		while (min_index_pos < stack_len)
+		while (min_index_pos > 0)
 		{
-			ft_rra(stack_a);
-			min_index_pos++;
+			ft_ra(stack_a);
+			min_index_pos--;
 		}
 	}
 	else
 	{
 		while (min_index_pos > 0)
 		{
-			ft_ra(stack_a);
-			min_index_pos--;
+			ft_rra(stack_a);
+			min_index_pos++;
 		}
 	}
 }
