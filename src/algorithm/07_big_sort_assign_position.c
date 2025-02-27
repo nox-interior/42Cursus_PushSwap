@@ -20,24 +20,24 @@ void	ft_assign_position(t_stack_node **stack)
 // Used to adjust stack_a after all elements have been pushed back in, sorted
 int	ft_smallest_index_pos(t_stack_node **stack)
 {
-	t_stack_node	*current;
+	t_stack_node	*current_node;
 	int				smallest_index;
 	int				smallest_position;
 
 	if (!stack || !*stack)
 		return (-1);
-	current = *stack;
+	current_node = *stack;
 	smallest_index = INT_MAX;
 	ft_assign_position(stack);
-	smallest_position = current->position;
-	while (current != NULL)
+	smallest_position = current_node->position;
+	while (current_node != NULL)
 	{
-		if (current->index < smallest_index)
+		if (current_node->index < smallest_index)
 		{
-			smallest_index = current->index;
-			smallest_position = current->position;
+			smallest_index = current_node->index;
+			smallest_position = current_node->position;
 		}
-		current = current->next;
+		current_node = current_node->next;
 	}
 	return (smallest_position);
 }
