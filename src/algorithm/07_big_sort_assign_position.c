@@ -3,17 +3,17 @@
 void	ft_assign_position(t_stack_node **stack)
 {
 	int				position_assigned;
-	t_stack_node	*node;
+	t_stack_node	*current_node;
 
 	position_assigned = 0;
-	node = *stack;
-	if (!(*stack) || !(node))
+	current_node = *stack;
+	if (!(*stack) || !(current_node))
 		return ;
-	while (node != NULL)
+	while (current_node != NULL)
 	{
-		node->position = position_assigned;
+		current_node->position = position_assigned;
 		position_assigned++;
-		node = node->next;
+		current_node = current_node->next;
 	}
 }
 
