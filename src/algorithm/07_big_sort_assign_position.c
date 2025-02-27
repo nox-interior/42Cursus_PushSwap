@@ -21,23 +21,23 @@ void	ft_assign_position(t_stack_node **stack)
 int	ft_smallest_index_pos(t_stack_node **stack)
 {
 	t_stack_node	*current_node;
-	int				smallest_index;
-	int				smallest_position;
+	int				current_min_index;
+	int				min_index_pos;
 
 	if (!stack || !*stack)
 		return (-1);
 	current_node = *stack;
-	smallest_index = INT_MAX;
+	current_min_index = INT_MAX;
 	ft_assign_position(stack);
-	smallest_position = current_node->position;
+	min_index_pos = current_node->position;
 	while (current_node != NULL)
 	{
-		if (current_node->index < smallest_index)
+		if (current_node->index < current_min_index)
 		{
-			smallest_index = current_node->index;
-			smallest_position = current_node->position;
+			current_min_index = current_node->index;
+			min_index_pos = current_node->position;
 		}
 		current_node = current_node->next;
 	}
-	return (smallest_position);
+	return (min_index_pos);
 }
