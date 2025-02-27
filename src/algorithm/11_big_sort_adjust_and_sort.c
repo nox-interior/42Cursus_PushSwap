@@ -20,7 +20,7 @@ void	ft_adjust_stack(t_stack_node **stack_a)
 		while (min_index_pos > 0)
 		{
 			ft_rra(stack_a);
-			min_index_pos++;
+			min_index_pos--;
 		}
 	}
 }
