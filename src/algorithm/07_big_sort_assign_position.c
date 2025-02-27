@@ -25,7 +25,7 @@ int	ft_smallest_index_pos(t_stack_node **stack)
 	int				smallest_position;
 
 	if (!stack || !*stack)
-		return (1);
+		return (-1);
 	current = *stack;
 	smallest_index = INT_MAX;
 	ft_assign_position(stack);
