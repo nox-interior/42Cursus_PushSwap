@@ -55,7 +55,7 @@ void			ft_move_node(t_stack_node **stack_a, t_stack_node **stack_b,
 void			ft_do_optimal_move(t_stack_node **stack_a,
 					t_stack_node **stack_b);
 void			ft_adjust_stack(t_stack_node **stack_a);
-int				ft_sorted_stack(t_stack_node *stack);
+bool			ft_sorted_stack(t_stack_node *stack);
 void			ft_big_sort(t_stack_node **stack_a, t_stack_node **stack_b);
 int				main(int argc, char **argv);
 
