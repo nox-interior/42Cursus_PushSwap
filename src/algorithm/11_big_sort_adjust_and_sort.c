@@ -3,24 +3,24 @@
 void	ft_adjust_stack(t_stack_node **stack_a)
 {
 	int	stack_len;
-	int	smallest_pos;
+	int	min_index_pos;
 
 	stack_len = ft_stack_len(*stack_a);
-	smallest_pos = ft_smallest_index_pos(stack_a);
-	if (smallest_pos > stack_len / 2)
+	min_index_pos = ft_min_index_pos(stack_a);
+	if (min_index_pos > stack_len / 2)
 	{
-		while (smallest_pos < stack_len)
+		while (min_index_pos < stack_len)
 		{
 			ft_rra(stack_a);
-			smallest_pos++;
+			min_index_pos++;
 		}
 	}
 	else
 	{
-		while (smallest_pos > 0)
+		while (min_index_pos > 0)
 		{
 			ft_ra(stack_a);
-			smallest_pos--;
+			min_index_pos--;
 		}
 	}
 }

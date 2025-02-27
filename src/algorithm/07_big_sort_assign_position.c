@@ -18,7 +18,7 @@ void	ft_assign_position(t_stack_node **stack)
 }
 
 // Used to adjust stack_a after all elements have been pushed back in, sorted
-int	ft_smallest_index_pos(t_stack_node **stack)
+int	ft_min_index_pos(t_stack_node **stack)
 {
 	t_stack_node	*current_node;
 	int				current_min_index;

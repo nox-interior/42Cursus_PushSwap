@@ -46,7 +46,7 @@ t_stack_node	**ft_init_stack(t_stack_node **stack_a, int argc, char **argv);
 int				ft_stack_len(t_stack_node *stack);
 void			ft_push_to_b(t_stack_node **stack_a, t_stack_node **stack_b);
 void			ft_assign_position(t_stack_node **stack);
-int				ft_smallest_index_pos(t_stack_node **stack);
+int				ft_min_index_pos(t_stack_node **stack);
 int				ft_find_target(t_stack_node **stack_a, int index_b);
 void			ft_calculate_moves(t_stack_node **stack_a,
 					t_stack_node **stack_b);
