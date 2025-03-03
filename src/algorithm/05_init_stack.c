@@ -1,6 +1,6 @@
 #include "../../inc/push_swap.h"
 
-static t_stack_node	*ft_stack_new(int nbr)
+static t_stack_node	*ft_stack_new_node(int nbr)
 {
 	t_stack_node	*new_node;
 
@@ -28,7 +28,7 @@ static void	ft_add_to_bottom(t_stack_node **stack_a, int nbr)
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
 
-	new_node = ft_stack_new(nbr);
+	new_node = ft_stack_new_node(nbr);
 	if (!*stack_a)
 		*stack_a = new_node;
 	else
