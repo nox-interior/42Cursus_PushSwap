@@ -41,15 +41,11 @@ int	ft_find_target(t_stack_node **stack_a, int index_b)
 {
 	int				target_index;
 	int				target_pos;
-	t_stack_node	*temp_a;
 
 	target_index = INT_MAX;
 	target_pos = -1;
 	if (!*stack_a || !stack_a)
 		return (-1);
-	temp_a = *stack_a;
-	while (temp_a)
-		temp_a = temp_a->next;
 	ft_find_next_highest_index(stack_a, index_b, &target_index, &target_pos);
 	if (target_index != INT_MAX)
 		return (target_pos);
