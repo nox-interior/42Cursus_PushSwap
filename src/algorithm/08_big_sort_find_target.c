@@ -4,36 +4,36 @@
 static void	ft_find_next_highest_index(t_stack_node **stack_a, int index_b,
 									int *target_index, int *target_pos)
 {
-	t_stack_node	*next_hi_a;
+	t_stack_node	*current_node;
 
 	if (!stack_a || !*stack_a)
 		return ;
-	next_hi_a = *stack_a;
-	while (next_hi_a != NULL)
+	current_node = *stack_a;
+	while (current_node != NULL)
 	{
-		if (next_hi_a->index > index_b && next_hi_a->index < *target_index)
+		if (current_node->index > index_b && current_node->index < *target_index)
 		{
-			*target_index = next_hi_a->index;
-			*target_pos = next_hi_a->position;
+			*target_index = current_node->index;
+			*target_pos = current_node->position;
 		}
-		next_hi_a = next_hi_a->next;
+		current_node = current_node->next;
 	}
 }
 
 static void	ft_find_lowest_index(t_stack_node **stack_a, int *target_index,
 									int *target_pos)
 {
-	t_stack_node	*lowest_in_a;
+	t_stack_node	*lowest_idx_in_a;
 
-	lowest_in_a = *stack_a;
-	while (lowest_in_a)
+	lowest_idx_in_a = *stack_a;
+	while (lowest_idx_in_a)
 	{
-		if (lowest_in_a->index < *target_index)
+		if (lowest_idx_in_a->index < *target_index)
 		{
-			*target_index = lowest_in_a->index;
-			*target_pos = lowest_in_a->position;
+			*target_index = lowest_idx_in_a->index;
+			*target_pos = lowest_idx_in_a->position;
 		}
-		lowest_in_a = lowest_in_a->next;
+		lowest_idx_in_a = lowest_idx_in_a->next;
 	}
 }
 
