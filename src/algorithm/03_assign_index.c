@@ -44,6 +44,8 @@ void	ft_assign_index(t_stack_node **stack_node)
 			}
 			current_node = current_node->next;
 		}
+		if (value_to_find == INT_MAX)
+			break ;
 		value_to_find++;
 	}
 }
