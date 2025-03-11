@@ -57,45 +57,45 @@ static void	ft_free_substrings(char **substrings)
 	}
 }
 
-static t_stack_node **ft_process_argument(t_stack_node **stack_a, char *arg)
+static	t_stack_node **ft_process_argument(t_stack_node **stack_a, char *arg)
 {
-    int     j;
-    char    **substrings;
-    int     nbr;
+	int		j;
+	char	**substrings;
+	int		nbr;
 
-    substrings = ft_split(arg, ' ');
-    j = 0;
-    while (substrings[j])
-    {
-        if (!ft_is_nbr(substrings[j]) || !ft_check_limits(substrings[j]))
-        {
-            ft_free_substrings(substrings);
-            ft_free_errors(stack_a, NULL);
-        }
-        nbr = ft_atoi(substrings[j]);
-        if (!ft_check_duplicates(*stack_a, nbr))
-        {
-            ft_free_substrings(substrings);
-            ft_free_errors(stack_a, NULL);
-        }
-        ft_add_to_bottom(stack_a, nbr);
-        j++;
-    }
-    ft_free_substrings(substrings);
-    return (stack_a);
+	substrings = ft_split(arg, ' ');
+	j = 0;
+	while (substrings[j])
+	{
+		if (!ft_is_nbr(substrings[j]) || !ft_check_limits(substrings[j]))
+		{
+			ft_free_substrings(substrings);
+			ft_free_errors(stack_a, NULL);
+		}
+		nbr = ft_atoi(substrings[j]);
+		if (!ft_check_duplicates(*stack_a, nbr))
+		{
+			ft_free_substrings(substrings);
+			ft_free_errors(stack_a, NULL);
+		}
+		ft_add_to_bottom(stack_a, nbr);
+		j++;
+	}
+	ft_free_substrings(substrings);
+	return (stack_a);
 }
 
-t_stack_node **ft_init_stack(t_stack_node **stack_a, int argc, char **argv)
+t_stack_node	**ft_init_stack(t_stack_node **stack_a, int argc, char **argv)
 {
-    int i;
+	int	i;
 
-    i = 1;
-    while (i < argc)
-    {
-        ft_process_argument(stack_a, argv[i]);
-        i++;
-    }
-    return (stack_a);
+	i = 1;
+	while (i < argc)
+	{
+		ft_process_argument(stack_a, argv[i]);
+		i++;
+	}
+	return (stack_a);
 }
 /*
 t_stack_node	**ft_init_stack(t_stack_node **stack_a, int argc, char **argv)
